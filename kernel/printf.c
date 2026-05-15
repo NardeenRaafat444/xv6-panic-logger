@@ -144,9 +144,18 @@ void
 panic(char *s)
 {
   panicking = 1;
-  printf("panic: ");
-  printf("%s\n", s);
+
+  printf("\n========== KERNEL PANIC ==========" "\n");
+  printf("panic: %s\n", s);
+
+  printf("\n--- recent kernel log ---\n");
+  klogdump();
+  printf("--- end kernel log ---\n");
+
+  printf("==================================\n");
+
   panicked = 1; // freeze uart output from other CPUs
+
   for(;;)
     ;
 }

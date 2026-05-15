@@ -77,6 +77,7 @@ int             pipewrite(struct pipe*, uint64, int);
 void            kloginit(void);
 void            klogputc(int);
 void            klogdump(void);
+void            klogsetlocking(int);
 
 // printf.c
 int             printf(char*, ...) __attribute__ ((format (printf, 1, 2)));

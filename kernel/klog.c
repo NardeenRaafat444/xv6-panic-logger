@@ -82,3 +82,9 @@ klogdump(void)
   consputc(']');
   consputc('\n');
 }
+
+void
+klogsetlocking(int enabled)
+{
+  klog.locking = enabled;
+}
