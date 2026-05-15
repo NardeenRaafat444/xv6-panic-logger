@@ -73,6 +73,10 @@ int             piperead(struct pipe*, uint64, int);
 int             pipewrite(struct pipe*, uint64, int);
 
 
+
+// crashctx.c
+void            crashctxdump(void);
+
 // klog.c
 void            kloginit(void);
 void            klogputc(int);
