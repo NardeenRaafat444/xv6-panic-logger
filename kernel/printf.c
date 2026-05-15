@@ -147,6 +147,7 @@ panic(char *s)
 
   printf("\n========== KERNEL PANIC ==========" "\n");
   printf("panic: %s\n", s);
+  crashctxdump();
 
   printf("\n--- recent kernel log ---\n");
   klogdump();

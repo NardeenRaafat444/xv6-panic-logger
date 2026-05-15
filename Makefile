@@ -37,6 +37,7 @@ OBJS_KCSAN = \
   $K/console.o \
   $K/printf.o \
   $K/klog.o \
+  $K/crashctx.o \
   $K/uart.o \
   $K/spinlock.o
 
