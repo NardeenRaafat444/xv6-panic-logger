@@ -105,3 +105,11 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+uint64
+sys_panic_test(void)
+{
+  printf("panic_test syscall: controlled panic requested by current process\n");
+  panic("controlled panic test requested from user space");
+  return 0;
+}
